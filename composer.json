@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/On4u_Gestitrans",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPLv3)",
+    "homepage": "",
+    "description": "Módulo conector con plataforma WS de Gestitrans",
+    "authors": [
+    {
+        "name": "On4u Global Services",
+        "email": "desarrollo@on4u.es"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

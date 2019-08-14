@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <carriers>
+      <groups>
+        <Gestitrans translate="label" module="shipping">
+          <label>Gestitrans</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+          <heading_configuration translate="label">
+              <label>Configuracion del modulo</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+          </heading_configuration>
+            <active translate="label">
+              <label>Activado</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </active>
+            <title translate="label">
+              <label>Título del metodo</label>
+                <validate>required-entry</validate>
+              <frontend_type>text</frontend_type>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </title>
+	        <username translate="label">
+              <label>Usuario (Cuenta Gestitrans)</label>
+                <validate>required-entry</validate>
+              <frontend_type>text</frontend_type>
+              <sort_order>9</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </username>
+	        <password translate="label">
+              <label>Contraseña (Cuenta Gestitrans)</label>
+                <validate>required-entry</validate>
+              <frontend_type>text</frontend_type>
+	      <!--<frontend_type>obscure</frontend_type>
+              <backend_model>adminhtml/system_config_backend_encrypted</backend_model>-->
+              <sort_order>12</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </password>
+              <heading_box translate="label">
+                  <label>Tipo de caja</label>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>14</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_box>
+	        <box_dimensions translate="label">
+              <label>Dimensiones caja (LxAnxAl) (cm)</label>
+                <validate>required-entry</validate>
+              <frontend_type>text</frontend_type>
+              <sort_order>15</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </box_dimensions>
+	        <max_weight translate="label">
+              <label>Máx. peso por bulto (kg)</label>
+                <validate>required-entry</validate>
+              <frontend_type>text</frontend_type>
+              <sort_order>18</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </max_weight>
+              <heading_countries translate="label">
+                  <label>Lista de países y transportistas</label>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>20</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_countries>
+          <specificcontries translate="label">
+              <label><![CDATA[Países disponibles]]></label>
+              <!--<validate>required-entry</validate>-->
+              <comment>Selecciona los países disponibles para envíos</comment>
+              <frontend_type>multiselect</frontend_type>
+              <sort_order>21</sort_order>
+              <source_model>Gestitrans/paises</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <can_be_empty>1</can_be_empty>
+            </specificcontries>
+            <specificproviders translate="label">
+                <label><![CDATA[Lista transportistas (ES)]]></label>
+                <!--<validate>required-entry</validate>-->
+                <comment>Seleccionar los trasnportistas para que aparezcan en el proceso de compra.</comment>
+                <frontend_type>multiselect</frontend_type>
+                <sort_order>24</sort_order>
+                <source_model>Gestitrans/transportistas</source_model>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+                <can_be_empty>1</can_be_empty>
+            </specificproviders>
+            <sort translate="label">
+              <label><![CDATA[Orden lista transportistas]]></label>
+              <frontend_type>select</frontend_type>
+              <source_model>Gestitrans/orden</source_model>
+              <sort_order>27</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </sort>
+              <tipo_margen translate="label">
+                  <label><![CDATA[Tipo de margen]]></label>
+                  <frontend_type>select</frontend_type>
+                  <source_model>Gestitrans/margen</source_model>
+                  <sort_order>30</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </tipo_margen>
+              <valor_margen translate="label">
+                  <label>Valor del margen (€ o %)</label>
+                  <validate>required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>33</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </valor_margen>
+              <heading_shedule_morning translate="label">
+                  <label>Mañanas</label>
+                  <class>shedule-title</class>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>36</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_shedule_morning>
+              <heading_shedule translate="label">
+                  <label>Horario recogida en tienda</label>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>36</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_shedule>
+              <shedule_pick_up_morning_from translate="label">
+                  <label><![CDATA[Desde]]></label>
+                  <frontend_type>time</frontend_type>
+                  <sort_order>39</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </shedule_pick_up_morning_from>
+              <shedule_pick_up_morning_to translate="label">
+                  <label><![CDATA[Hasta]]></label>
+                  <frontend_type>time</frontend_type>
+                  <sort_order>40</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </shedule_pick_up_morning_to>
+              <shedule_pick_up_afternoon_from translate="label">
+                  <label><![CDATA[Desde]]></label>
+                  <frontend_type>time</frontend_type>
+                  <sort_order>41</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </shedule_pick_up_afternoon_from>
+              <heading_shedule_afternoon translate="label">
+                  <label>Tardes</label>
+                  <class>shedule-title</class>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>41</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_shedule_afternoon>
+              <shedule_pick_up_afternoon_to translate="label">
+                  <label><![CDATA[Hasta]]></label>
+                  <frontend_type>time</frontend_type>
+                  <sort_order>42</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </shedule_pick_up_afternoon_to>
+              <heading_store_configuration translate="label">
+                  <label>Datos configuración de la tienda</label>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>50</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_store_configuration>
+              <country_id translate="label">
+                  <label>Country</label>
+                  <frontend_type>select</frontend_type>
+                  <frontend_class>countries</frontend_class>
+                  <source_model>adminhtml/system_config_source_country</source_model>
+                  <sort_order>55</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>0</show_in_store>
+              </country_id>
+              <region_id translate="label">
+                  <label>Region/State</label>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>60</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>0</show_in_store>
+              </region_id>
+              <store_city translate="label">
+                  <label>Ciudad</label>
+                  <validate>required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>65</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </store_city>
+              <store_address translate="label">
+                  <label>Dirección</label>
+                  <validate>required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>65</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </store_address>
+              <store_postcode translate="label">
+                  <label>Código Postal</label>
+                  <validate>validate-zip required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>70</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </store_postcode>
+              <store_contact_name translate="label">
+                  <label>Nombre contacto</label>
+                  <validate>required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>75</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </store_contact_name>
+              <store_contact_phone translate="label">
+                  <label>Teléfono contacto</label>
+                  <validate>validate-number required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>80</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </store_contact_phone>
+              <store_contact_email translate="label">
+                  <label>Correo contacto</label>
+                  <validate>validate-email required-entry</validate>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>85</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </store_contact_email>
+
+              <heading_other translate="label">
+                  <label>Otros parametros de configuración</label>
+                  <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                  <sort_order>300</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </heading_other>
+            <showmethod translate="label">
+              <label>Mostar método aunque no es aplicable</label>
+              <frontend_type>select</frontend_type>
+              <sort_order>310</sort_order>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </showmethod>
+            <specificerrmsg translate="label">
+              <label>Mensaje en caso de error</label>
+              <frontend_type>textarea</frontend_type>
+              <sort_order>320</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </specificerrmsg>
+          </fields>
+        </Gestitrans>
+      </groups>
+    </carriers>
+  </sections>
+</config>

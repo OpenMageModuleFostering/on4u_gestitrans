@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.shipping_method.available">
+            <action method="setTemplate">
+                <template>on4u_gestitrans/checkout/onepage/shipping_method/available.phtml</template>
+            </action>
+           <!-- <block type="checkout/onepage_shipping_method_available" template="checkout/onepage/shipping_method/available.phtml" name="adepta.checkout.onepage.shipping_method.available"></block>
+            <block type="adepta_deliverytime/onepage_deliverydate" name="adepta.deliverydate">
+                <block type="adepta_deliverytime/onepage_deliverydate_dropdown" name="adepta.deliverydate.dropdown"></block>
+            </block>-->
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_shippingmethod>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>on4u_gestitrans/checkout/onepage/shipping_method/available.phtml</template>
+            </action>
+            <!--<block type="checkout/onepage_shipping_method_available" template="checkout/onepage/shipping_method/available.phtml" name="adepta.checkout.onepage.shipping_method.available"></block>
+            <block type="adepta_deliverytime/onepage_deliverydate" name="adepta.deliverydate">
+                <block type="adepta_deliverytime/onepage_deliverydate_dropdown" name="adepta.deliverydate.dropdown"></block>
+            </block>-->
+        </reference>
+    </checkout_onepage_shippingmethod>
+</layout>

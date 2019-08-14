@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>On4u_Gestitrans</name>
+    <version>0.2.5</version>
+    <stability>stable</stability>
+    <license>GNU General Public License (GPLv3)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>M&#xF3;dulo conector con plataforma WS de Gestitrans</summary>
+    <description>Este m&#xF3;dulo permite integrar los servicios de log&#xED;stica integral de Gestitrans en las plataformas Magento</description>
+    <notes>Gestitrans</notes>
+    <authors><author><name>On4u Global Services</name><user>on4u</user><email>desarrollo@on4u.es</email></author></authors>
+    <date>2015-02-12</date>
+    <time>16:01:27</time>
+    <contents><target name="magecommunity"><dir name="On4u"><dir name="Gestitrans"><dir name="Block"><dir name="Adminhtml"><dir name="Sales"><dir name="Order"><file name="View.php" hash="aeead473e58e2495ea85b9d2845eb44a"/></dir></dir></dir><dir name="Onepage"><dir name="Shipping"><dir name="Method"><file name="Available.php" hash="97b3f6fee7687904afca9cfcf384bd45"/></dir></dir></dir></dir><dir name="Model"><file name="Escoger.php" hash="3b7f8774c5cffdff0f3601a53e190784"/><file name="Margen.php" hash="21ed18097e8316b7c9b7511ddf31e39c"/><file name="Observer.php" hash="f25e2f48f73e45657caa2537233bff77"/><dir name="On4u"><file name="Gestitrans.php" hash="b738eeb37fbd84e573673ae8552a38aa"/><file name="Shipment.php" hash="1d837930c180e8b2e016e989896d4d03"/><dir name="Source"><file name="Method.php" hash="2751e72755d3310da282034ba0360c67"/><file name="User.php" hash="cd285d33f27e5bf28453111655cdd4c2"/></dir></dir><file name="Orden.php" hash="4243f49f66fb0e2c9868ca8298079d7c"/><file name="Paises.php" hash="dde037669a78473de87e43bd6ac53e36"/><dir name="Resource"><file name="Setup.php" hash="bdba8443fed4bc1e7cd9d0b72f7e280f"/></dir><file name="Transportistas.php" hash="6e920708f3bb2d34884272ffb3852e11"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="GestitransController.php" hash="9d905fc07ac12f0dc528118d46133832"/></dir></dir><dir name="etc"><file name="config.xml" hash="2f2f689d15a739a237f8b48ebf8730b0"/><file name="system.xml" hash="730f1362d3689414abfad6b59671ea48"/></dir><dir name="sql"><dir name="gestitrans_setup"><file name="install-0.1.0.php" hash="159f5c237b5de83810200ef1e721ca8d"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="on4u_gestitrans.xml" hash="0b07131a1a41a5a7482b309a3cb721a7"/></dir><dir name="template"><dir name="on4u_gestitrans"><dir name="order"><dir name="view"><file name="info.phtml" hash="775c5cf6f2b9b1d25007c08a5142b83f"/></dir></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="on4u_gestitrans.xml" hash="5ed6b232ef7a7ec5d867d6e179f320af"/></dir><dir name="template"><dir name="on4u_gestitrans"><dir name="checkout"><dir name="onepage"><dir name="shipping_method"><file name="additional.phtml" hash="2e7bbbfcc8723958f1b805107d10fee4"/><file name="available.phtml" hash="48c93d186a34f64ac0558ae45f3dbce7"/></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="On4u_Gestitrans.xml" hash="0104769baf3754cecb82871f5e20c4ff"/></dir></target><target name="magelocale"><dir><dir name="es_ES"><file name="On4u_Gestitrans.csv" hash="e0f6153803e44727900b021dff6ea5cd"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
